@@ -1,8 +1,12 @@
-
+import RootLayout from "./layouts/RootLayout"
 
 const App = () => {
   return (
-    <div></div>
+   <RootLayout>
+      <div>
+        <h2>{`This is the main content of the App component.`}</h2>
+      </div>
+   </RootLayout>
   )
 }
 
