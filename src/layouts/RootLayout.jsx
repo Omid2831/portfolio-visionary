@@ -5,7 +5,7 @@ import Footer from '../shared/components/ui/Footer'
 const RootLayout = ({ children }) => {
     return (
         <div
-        className='min-h-screen px-3 py-4'>
+        className='flex flex-col min-h-screen px-3 py-4'>
             <Header />
 
             <main className='flex-1'>
