@@ -1,9 +1,10 @@
+import Header from '../shared/components/Header'
+
 const RootLayout = ({ children }) => {
     return (
-        <div>
-            <header>
-                <h1>Welcome to the Root Layout</h1>
-            </header>
+        <div
+        className='min-h-screen px-3 py-4'>
+            <Header />
 
             <main>
                 {children}
