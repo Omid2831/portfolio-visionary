@@ -1,4 +1,6 @@
-import Header from '../shared/components/Header'
+import Header from '../shared/components/ui/Header'
+import Footer from '../shared/components/ui/Footer'
+
 
 const RootLayout = ({ children }) => {
     return (
@@ -6,14 +8,12 @@ const RootLayout = ({ children }) => {
         className='min-h-screen px-3 py-4'>
             <Header />
 
-            <main>
+            <main className='flex-1'>
                 {children}
             </main>
 
 
-            <footer>
-                <p>&copy; 2024 My Application</p>
-            </footer>
+            <Footer />
         </div>
     )
 }
