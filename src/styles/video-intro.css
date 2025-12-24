@@ -1,0 +1,240 @@
+/* Video Background Wrapper - Full Width */
+.video-background-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 1;
+  /* Ensure container can handle high-res video */
+  will-change: transform;
+}
+
+.video-background {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  /* Use large dimensions to force YouTube to serve 4K quality */
+  /* YouTube serves highest quality based on iframe size */
+  width: 2560px;
+  height: 1440px;
+  min-width: 100%;
+  min-height: 100%;
+  transform: translate(-50%, -50%);
+  object-fit: cover;
+  pointer-events: none;
+  filter: brightness(0.7);
+  transition: transform 0.6s cubic-bezier(2, 0, 0.2, 1), filter 0.6s ease;
+
+}
+
+/* For 4K displays, use full 4K dimensions */
+@media (min-width: 1920px) {
+  .video-background {
+    width: 3840px;
+    height: 2160px;
+  }
+}
+
+.group:hover .video-background {
+  transform: translate(-50%, -50%) scale(1.05);
+  filter: brightness(0.8);
+}
+
+/* Overlay Gradient */
+.video-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    135deg,
+    rgba(26, 26, 26, 0.7) 0%,
+    rgba(45, 45, 45, 0.5) 50%,
+    rgba(99, 102, 241, 0.2) 100%
+  );
+  z-index: 2;
+  transition: opacity 0.4s ease;
+}
+
+.group:hover .video-overlay {
+  opacity: 0.6;
+}
+
+/* Content Overlay - Glassmorphism */
+.video-content-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 3;
+  padding: 2rem;
+  pointer-events: none;
+}
+
+.video-content-inner {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  padding: 2rem 3rem;
+  text-align: center;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  animation: fadeInScale 0.8s ease-out;
+}
+
+.group:hover .video-content-inner {
+  transform: scale(1.05);
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(99, 102, 241, 0.3);
+  box-shadow: 0 12px 48px rgba(99, 102, 241, 0.2),
+    inset 0 1px 0 rgba(255, 255, 255, 0.15);
+}
+
+.video-title-glow {
+  position: relative;
+  margin-bottom: 1.5rem;
+}
+
+.video-title-glow::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 120%;
+  height: 120%;
+  background: radial-gradient(
+    circle,
+    rgba(99, 102, 241, 0.3) 0%,
+    transparent 70%
+  );
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  z-index: -1;
+}
+
+.group:hover .video-title-glow::after {
+  opacity: 1;
+}
+
+/* Play Indicator Animation */
+.video-play-indicator {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+.play-icon {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: 3px solid rgba(255, 255, 255, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  animation: pulse 2s ease-in-out infinite;
+}
+
+.play-icon::before {
+  content: "";
+  width: 0;
+  height: 0;
+  border-left: 20px solid rgba(92, 18, 129, 0.3);
+  border-top: 12px solid transparent;
+  border-bottom: 12px solid transparent;
+  margin-left: 6px;
+  transition: all 0.3s ease;
+}
+
+.group:hover .play-icon {
+  border-color: rgba(99, 102, 241, 0.6);
+  transform: scale(1.1);
+}
+
+.group:hover .play-icon::before {
+  border-left-color: rgba(255, 255, 255, 1);
+}
+
+/* Animated Border Glow */
+.video-border-glow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: inherit;
+  padding: 2px;
+  background: linear-gradient(
+    135deg,
+    rgba(99, 102, 241, 0.3),
+    rgba(168, 85, 247, 0.3),
+    rgba(99, 102, 241, 0.3)
+  );
+  background-size: 200% 200%;
+  opacity: 0;
+  z-index: 4;
+  animation: borderGlow 3s ease-in-out infinite, gradientShift 4s ease infinite;
+  transition: opacity 0.4s ease;
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  /** mask composite ON the context box */
+  mask-composite: exclude;
+}
+
+.group:hover .video-border-glow {
+  opacity: 1;
+}
+
+/* Animations */
+@keyframes fadeInScale {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    box-shadow: 0 0 0 0 rgba(99, 102, 241, 0.4);
+  }
+  50% {
+    box-shadow: 0 0 0 10px rgba(99, 102, 241, 0);
+  }
+}
+
+@keyframes borderGlow {
+  0%,
+  100% {
+    opacity: 0.3;
+  }
+  50% {
+    opacity: 0.6;
+  }
+}
+
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
