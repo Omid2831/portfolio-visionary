@@ -8,10 +8,10 @@ import SocialLinks from './SocialLinks'
 const CardPortfolio = () => {
     return (
         <section className='card-portfolio-section'>
-            <div className='card-portfolio-header'>
+            <header className='card-portfolio-header'>
                 <h2 className='head-line'>Hello, I'm Omid Mehrabi</h2>
                 <p className='sup-head-line'>Frontend Engineer</p>
-            </div>
+            </header>
             <Card className="card-portfolio">
                 <Avatar className="card-portfolio-avatar">
                     <AvatarImage id="portfolio-image" src="profile-image.jpg" alt="Omid MHR" />
