@@ -1,0 +1,13 @@
+/** card style for portfolio cards **/
+.card-portfolio {
+  background-color: transparent;
+  border: none;
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2);
+}
+
+/** fit the image inside the avatar **/
+#portfolio-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
