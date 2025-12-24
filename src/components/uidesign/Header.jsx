@@ -36,7 +36,7 @@ const Header = () => {
 
             {/* Navigation Bar - Desktop */}
             <nav className='hidden lg:block'>
-                <ul className='flex justify-between max-w-4xl mx-auto gap-x-4 py-4'>
+                <ul className='flex justify-between max-w-4xl mx-auto gap-x-4 px-3 py-4'>
                     <li>Home</li>
                     <li>About</li>
                     <li>Projects</li>
