@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import PlayOverlay from "../uidesign/PlayOverlay";
 import "../../styles/video-intro.css";
+import "../../styles/portfolio-section.css"
 
-const YT_SRC = "https://www.youtube.com/embed/N0Gk7AdrQV4?autoplay";
+const YT_SRC = "https://www.youtube.com/embed/N0Gk7AdrQV4?autoplay=1";
 
 const VideoIntroPortfolio = () => {
     const [videoSrc, setVideoSrc] = useState(YT_SRC);
