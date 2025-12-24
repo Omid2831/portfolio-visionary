@@ -1,8 +1,12 @@
-@import 'tailwindcss';
+@import "tailwindcss";
 @import "tw-animate-css";
 
 @custom-variant dark (&:is(.dark *));
 
+/* Debug outline for all elements - keep at the end for highest specificity */
+* {
+  outline: 2px solid rgb(181, 197, 201) !important; /* For debugging purposes, can be removed later */
+}
 :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
