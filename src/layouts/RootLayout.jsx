@@ -1,5 +1,5 @@
-import Header from '../shared/components/ui/Header'
-import Footer from '../shared/components/ui/Footer'
+import Header from '../components/uidesign/Header'
+import Footer from '../components/uidesign/Footer'
 
 
 const RootLayout = ({ children }) => {
