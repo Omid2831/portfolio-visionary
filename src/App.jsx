@@ -2,6 +2,7 @@ import RootLayout from "./layouts/RootLayout"
 import CardPortfolio from "./components/LandingSection/CardPortfolio"
 import PortfolioSection from "./components/LandingSection/PortfolioSection"
 import VideoIntroPortfolio from "./components/LandingSection/VideoIntroPortfolio"
+import QuestionedAskedAccordion from "./components/uidesign/QuestionedAskedAccordian"
 
 const App = () => {
   return (
@@ -16,6 +17,7 @@ const App = () => {
           </div>
         </div>
       </PortfolioSection>
+      <QuestionedAskedAccordion />
     </RootLayout>
   )
 }
