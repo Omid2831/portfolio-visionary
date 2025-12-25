@@ -19,11 +19,12 @@ const App = () => {
         </div>
       </PortfolioSection>
       <QuestionedAskedAccordion />
-      
+
       {/* Project Cards Section */}
-      <div
-      className="border-2 px-4 py-6 md:px-6 md:py-8 lg:px-8 lg:py-10 mx-auto my-16 max-w-7xl rounded-3xl border-indigo-500/30 bg-neutral-900/50 backdrop-blur-sm">
-       <ProjectList />
+      <div>
+          {/** Project Title */}
+        <h2 className="mb-8 text-5xl font-bold text-white text-center">Projects</h2>
+        <ProjectList />
       </div>
     </RootLayout>
   )
