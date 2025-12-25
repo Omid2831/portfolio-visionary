@@ -3,6 +3,7 @@ import CardPortfolio from "./components/LandingSection/CardPortfolio"
 import PortfolioSection from "./components/LandingSection/PortfolioSection"
 import VideoIntroPortfolio from "./components/LandingSection/VideoIntroPortfolio"
 import QuestionedAskedAccordion from "./components/uidesign/QuestionedAskedAccordian"
+import ProjectList from "./components/ProjectSection/ProjectList"
 
 const App = () => {
   return (
@@ -18,6 +19,12 @@ const App = () => {
         </div>
       </PortfolioSection>
       <QuestionedAskedAccordion />
+      
+      {/* Project Cards Section */}
+      <div
+      className="border-2 px-4 py-6 md:px-6 md:py-8 lg:px-8 lg:py-10 mx-auto my-16 max-w-7xl rounded-3xl border-indigo-500/30 bg-neutral-900/50 backdrop-blur-sm">
+       <ProjectList />
+      </div>
     </RootLayout>
   )
 }
