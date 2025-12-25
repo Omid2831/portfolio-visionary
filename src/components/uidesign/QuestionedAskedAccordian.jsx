@@ -48,6 +48,7 @@ const QuestionedAskedAccordion = () => {
 
       {/* Subtle glow background */}
       <div className="pointer-events-none absolute inset-x-0 -bottom-24 mx-auto h-72 max-w-3xl rounded-full bg-indigo-500/10 blur-3xl" />
+      <div className="pointer-events-none absolute inset-x-0 top-24 mx-auto h-72 max-w-3xl rounded-full bg-indigo-700/10 blur-3xl" />
     </section>
   );
 };
