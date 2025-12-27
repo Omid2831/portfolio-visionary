@@ -1,0 +1,24 @@
+.contactUs {
+  background: linear-gradient(145deg, #1a1a1f, #111114);
+  border: 1px solid rgba(168, 149, 255, 0.15);
+  border-radius: 18px;
+
+  padding: 28px;
+  
+  box-shadow:
+    0 10px 30px rgba(0, 0, 0, 0.6),
+    0 0 0 1px rgba(168, 149, 255, 0.05);
+
+  color: #f3f3f3;
+}
+
+article .info {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+}
+
+article .info p {
+    color: rgb(163, 161, 161);
+    font-weight: 300;
+}
