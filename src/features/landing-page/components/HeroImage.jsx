@@ -1,4 +1,5 @@
 import React from 'react'
+import CurvedLineShape from './sketch/CurvedLineShape'
 
 const HeroImage = () => {
   return (
@@ -14,15 +15,17 @@ const HeroImage = () => {
       <div aria-hidden="true">
         {/* Decorative elements */}
         {/* Curved line */}
-        <img src="curved-line.svg" alt="Curved line" className="absolute -bottom-6 -left-8 w-32 h-20" />
+        <CurvedLineShape />
+        
         {/* Star top right */}
         <img src="star.svg" alt="star" className="absolute -top-4 -right-4 w-15 h-25 text-white" />
 
         {/* Small circle */}
-        <div className="absolute -bottom-8 right-8 w-4 h-4 border-2 border-white rounded-full" />
+        <div className="absolute -bottom-4 right-8 w-4 h-4 border-2 border-white rounded-full" />
+        <div className="absolute top-4 left-0 right-8 w-4 h-4 border-2 border-white rounded-full" />
 
         {/* Dot */}
-        <div className="absolute top-8 -right-8 w-2 h-2 bg-white rounded-full" />
+        <div className="absolute top-4 -right-8 w-2 h-2 bg-white rounded-full" />
       </div>
     </figure>
   )
