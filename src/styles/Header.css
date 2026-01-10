@@ -1,10 +1,11 @@
 /** Header  **/
 .header {
-  background-color: transparent;
-  padding: 20px;
+  background-color: #1a1a2e;
+  padding: 15px 30px;
   text-align: center;
-  font-size: 24px;
+  font-size: 20px;
   font-weight: bold;
+  border: 2px solid rgb(190, 186, 186);
   color: rgba(255, 255, 255, 0.87);
 }
 
@@ -42,5 +43,3 @@
 .header > nav > ul > li:hover::after {
   text-decoration: underline;
 }
-
-
