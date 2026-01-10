@@ -4,7 +4,7 @@ import HeroContent from './components/HeroContent'
 
 const Hero = () => {
   return (
-    <section className='max-w-7xl min-h-150 bg-[#1a1a2e] flex items-center justify-between px-8 md:px-16 lg:px-24 py-16 border-5  rounded-lg shadow-lg gap-8 md:gap-16'>
+    <section className='max-w-7xl min-h-150 bg-[url(bg-pr.svg)] flex items-center justify-between px-8 md:px-16 lg:px-24 py-16 shadow-lg gap-8 md:gap-16'>
       {/* Left side - Text content */}
       {/* 
   Websites that make attracting customers easy
